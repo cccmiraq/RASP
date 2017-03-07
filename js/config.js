@@ -92,7 +92,7 @@ var config = {
 			{
 				name : "need",
 				alias : "Needs",
-				icon : "activity_learning_60px_bluebox"
+				icon : "activity_needs_assessment_60px_bluebox"
 			},
 			{
 				name : "physicalcondition",
