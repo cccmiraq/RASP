@@ -158,7 +158,7 @@ jQuery(document).ready(function() {
 								}
 							}
 							else {
-								$("#"+f.category+"").append("<p><img class='tl' src='img/tl/tl-"+tl+".svg'>&nbsp;"+f.alias+" : <b style='color:#4095cd'>"+h[f.csv_field]+"</b></p>")
+								$("#"+f.category+"").append("<p><img class='tl' src='img/tl/tl-"+tl+".png'>&nbsp;"+f.alias+" : <b style='color:#4095cd'>"+h[f.csv_field]+"</b></p>")
 							}
 						}
 					}
