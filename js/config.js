@@ -276,10 +276,10 @@ var color_list = ['#0072bc','#4095cd','#7fb8dd','#bfdcee','#bfbfbf']
 		}
 	//percentagegreen
 		else if (tl == "percentagegreen"){
-			if (v == "more_75%") {
+			if (v == "More than 75%") {
 				return "success"
 			}
-			else if (v == "btw_50%_75%") {
+			else if (v == "Between 50% 75%") {
 				return "warning"
 			}
 			else {
@@ -330,14 +330,25 @@ var color_list = ['#0072bc','#4095cd','#7fb8dd','#bfdcee','#bfbfbf']
 	// For Protection Traffic Light
 
 	if (tl == "protect"){
-			if (v == "yes" || v == "Yes" || v == "TRUE" || v == "more_75%") {
+			if (v == "yes" || v == "Yes" || v == "TRUE" || v == "More than 75%" || v == "Between 50% and 75%") {
 				return "success"
 			}
-			else if (v == "no" || v == "No" || v == "none" || v == "FALSE" || v == "less_25%") {
+			else if (v == "no" || v == "No" || v == "none" || v == "FALSE" || v == "Less than 25%") {
 				return "danger"
 			}
 			else {
 				return "warning"
+			}
+		}
+	if (tl == "protect2"){
+			if (v == "yes" || v == "Yes" || v == "TRUE" || v == "More than 75%" || v == "Between 50% and 75%") {
+				return "danger"
+			}
+			else if (v == "no" || v == "No" || v == "none" || v == "FALSE" || v == "Less than 25%") {
+				return "success"
+			}
+			else {
+				return "none"
 			}
 		}
 	// For Food Security Traffic Light
@@ -356,10 +367,10 @@ var color_list = ['#0072bc','#4095cd','#7fb8dd','#bfdcee','#bfbfbf']
 		// For WASH Traffic Light
 
 	if (tl == "wash"){
-			if (v == "yes" || v == "Yes" || v == "TRUE" || v == "more_75%" || v > 0  || v == "btw_25%_50%") {
+			if (v == "yes" || v == "Yes" || v == "TRUE" || v == "More than 75%" || v > 0  || v == "Between 25% and 50%" || v == "Between 50% and 75%") {
 				return "success"
 			}
-			else if (v == "no" || v == "No" || v == "none" || v == "FALSE" || v == "less_25%" || v == "never" || v ==0) {
+			else if (v == "no" || v == "No" || v == "none" || v == "FALSE" || v == "Less than 25%" || v == "never" || v ==0) {
 				return "danger"
 			}
 			else {
