@@ -53,7 +53,7 @@ jQuery(document).ready(function() {
 					var icon = L.icon({
 						iconUrl: 'img/markers_icon/'+data[i][config.level]+'.png',
 						iconSize:     [30, 30], // size of the icon 
-						iconAnchor: [10,10]
+						iconAnchor: [15,30]
 					});
 
 					/* This is changed to bellow 
