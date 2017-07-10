@@ -1,10 +1,9 @@
 jQuery(document).ready(function() {
-	
 	$('.typeahead').hide();
 	$('#left_of_map').hide();
 	$('#analysis').hide();
 	
-	
+	/*
 	$.ajax({
 	   url:config.url+"#dataset-resources",
 	   type:'GET',
@@ -19,25 +18,22 @@ jQuery(document).ready(function() {
 				u = "https://data.humdata.org"+u;
 			}
 			else{}
-			
-	
-	//var u = "https://dl.dropboxusercontent.com/s/1eqqeftdrfln0im/rasp.csv?dl=0";
-	
+	*/		
+	var u = "http://193.134.241.210/dataset/1607ef1c-9c47-4bf5-aeb5-0d9422e979d7/resource/9ff12198-8eee-4706-87dc-0ec62c4dfe50/download/rasp.csv";
+	var map, loc, name;
 	d3.csv(u, function(data) {
-		//console.log(data)
-		
+		console.log(data)
 		d3.csv("data/fields.csv", function(fields) {
-			//console.log(fields)
-			
+			console.log(fields)
 			//map
-			var map = L.map('map');
+			map = L.map('map');
 			map.setView([0, 0], 1);
 			//scalebar
 			L.control.scale().addTo(map);
 			//basemaps
 			var mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>', maxZoom: 18});
 			var osm_HOT = L.tileLayer('http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {attribution: '&copy; Openstreetmap France | &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>', maxZoom: 20});
-			 var osm_HOT = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png', { attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',maxZoom: 18});
+			var osm_HOT = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png', { attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',maxZoom: 18});
        
 			//var osm_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {attribution: '&copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Tiles courtesy of <a href="http://hot.openstreetmap.org/" target="_blank">Humanitarian OpenStreetMap Team</a>'});
 			var esri_satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { attribution: '&copy; <a href="http://www.esri.com/">Esri</a>, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community', maxZoom: 18});
@@ -420,8 +416,8 @@ jQuery(document).ready(function() {
 						});	
 				}
 			}
-}
-})
+
+
 });
 
 
