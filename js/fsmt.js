@@ -21,8 +21,8 @@ jQuery(document).ready(function() {
 			else{}
 			
 	
-	//var u = "https://dl.dropboxusercontent.com/s/1eqqeftdrfln0im/rasp.csv?dl=0";
-	var u = "data/rasp.csv";
+	var u = "https://data.humdata.org/dataset/rasp3/raspnew.csv"
+	//var u = "data/rasp.csv";
 	d3.csv(u, function(data) {
 		//console.log(data)
 		
