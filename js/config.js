@@ -1,7 +1,7 @@
 var config = {
 		
 		//URL of the CSV
-		url : "https://data.humdata.org/dataset/rasp3",
+		url : "https://data.humdata.org/dataset/rasp3/raspnew.csv",
 		
 		//Latitude field
 		lat : "coordinates_latitude",
