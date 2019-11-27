@@ -21,7 +21,7 @@ jQuery(document).ready(function() {
 			else{}
 			
 	
-	var u = "https://data.humdata.org/dataset/rasp3/raspnew.csv"
+	var u = "https://ckanviz.swige.unhcr.org/dataset/1607ef1c-9c47-4bf5-aeb5-0d9422e979d7/resource/9ff12198-8eee-4706-87dc-0ec62c4dfe50/download/rasp.csv"
 	//var u = "data/rasp.csv";
 	d3.csv(u, function(data) {
 		//console.log(data)
