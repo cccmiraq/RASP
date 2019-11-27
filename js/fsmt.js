@@ -51,7 +51,7 @@ jQuery(document).ready(function() {
 						//iconUrl: 'img/markers_icon/'+data[i][config.level]+'.png',
 						//iconSize:     [30, 30], // size of the icon 
 						//iconAnchor: [15,30]
-					var tValues = ['camp', 'Collective centre', 'Dispersed settlements', 'reception centre'];
+					var tValues = ['Collective Shelter', 'Dispersed settlements', 'Self settled camp', 'reception centres', 'Small settlements'];
 					var t = data[i][config.type]
 					t = t.toLowerCase()
 					var icon = L.icon({
