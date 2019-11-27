@@ -47,17 +47,17 @@ jQuery(document).ready(function() {
 			var marker_list = [];
 			for (var i in data){
 				if (data[i][config.lat] && data[i][config.lon]){
-					var icon = L.icon({
-						iconUrl: 'img/markers_icon/'+data[i][config.level]+'.png',
-						iconSize:     [30, 30], // size of the icon 
-						iconAnchor: [15,30]
-					//var tValues = ['camp', 'Collective centre', 'Dispersed settlements', 'reception centre'];
-					//var t = data[i][config.type]
-					//t = t.toLowerCase()
 					//var icon = L.icon({
-						//iconUrl: tValues.indexOf(t) !== -1 ? 'img/markers_icon/'+t+'.svg' : 'img/markers_icon/default.svg',
-						//iconSize:     [20, 20], // size of the icon 
-						//iconAnchor:     [10,10] /**/
+						//iconUrl: 'img/markers_icon/'+data[i][config.level]+'.png',
+						//iconSize:     [30, 30], // size of the icon 
+						//iconAnchor: [15,30]
+					var tValues = ['camp', 'Collective centre', 'Dispersed settlements', 'reception centre'];
+					var t = data[i][config.type]
+					t = t.toLowerCase()
+					var icon = L.icon({
+						iconUrl: tValues.indexOf(t) !== -1 ? 'img/markers_icon/'+t+'.svg' : 'img/markers_icon/default.svg',
+						iconSize:     [20, 20], // size of the icon 
+						iconAnchor:     [10,10] /**/
 					});
 
 					/* This is changed to bellow 
